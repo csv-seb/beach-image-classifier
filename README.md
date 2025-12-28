@@ -33,17 +33,7 @@ To improve the baseline results provided by the instructors, I implemented sever
 - Checkpointing: Integrated a persistent saving system in Google Colab to preserve the best model weights based on Validation F1-score.
 
 ### Interpretability
-As a researcher with a background in Visual Arts, ensuring model transparency was a priority. I implemented Grad-CAM (Gradient-weighted Class Activation Mapping) to visualize the model's "attention."
-
-#### Key Insight: 
-Analysis of the heatmaps verified that the model correctly ignores "noise" (sky, deep water) and focuses its activation on the patterns of the shoreline where sargassum typically accumulates. In this instance, the model predicted 'Abundante' with 31% confidence. The lower confidence score highlights a common environmental challenge: the visual similarity between dark rocks and sargassum. To improve this, I would look into adding more 'Hard Negative' samples—images of rocky coastlines with zero sargassum—to teach the model to distinguish between mineral textures and organic biomass.
-
-<img width="950" height="465" alt="image" src="https://github.com/user-attachments/assets/a1290464-d1da-478e-a173-6331b9040369" />
- 
-## 🔍 Model Interpretability & Error Analysis
-
-
-A key part of this project was validating **why** the model made its decisions. Using Grad-CAM, I compared high-confidence "Excesivo" predictions against lower-confidence edge cases to identify areas for future optimization.
+A key part of this project was validating **why** the model made its decisions. Using Grad-CAM, I compared high-confidence predictions against lower-confidence edge cases to identify areas for future optimization.
 
 | **Case A: High-Confidence "Excesivo" (99.9%)** | **Case B: Complex Edge Case (31.1%)** |
 | :---: | :---: |
@@ -64,5 +54,5 @@ A key part of this project was validating **why** the model made its decisions. 
 
 Author: Sebastian Méndez
 
-
-
+### Acknowledgments
+This project was developed as part of a Kaggle competition during the 'MeIA 2025' intensive course at UNAM (June 2025). I would like to thank the instructional team for providing the initial sample code and the curated dataset used in this research.
