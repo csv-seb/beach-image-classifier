@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Sargassum Classification
 ---
 
 # Sargassum Influx Classification: An AI Approach to Environmental Monitoring
